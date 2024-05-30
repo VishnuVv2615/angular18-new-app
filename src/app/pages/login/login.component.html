@@ -1,0 +1,19 @@
+<div class="container fs-5 shadow-lg rounded-5">
+<h2 class="text-dark mt-3">Login User</h2>
+<form class="form-group d-flex flex-column pb-4 text-dark" [formGroup]="loginForm" (submit)="onSubmit()">
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" class="form-control" formControlName="email">
+    <div *ngIf="loginForm.controls.email?.invalid && (loginForm.controls.email?.touched || loginForm.controls.email?.dirty)" class="text-danger">
+<span *ngIf="loginForm.controls.email?.errors?.required">Email is required</span>
+<span *ngIf="loginForm.controls.email?.errors?.email">Invalid email format</span>
+    </div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" class="form-control" formControlName="password">
+    <div *ngIf="loginForm.controls.password?.invalid && (loginForm.controls.password?.touched || loginForm.controls.password?.dirty)" class="text-danger">
+        <span *ngIf="loginForm.controls.password?.errors?.required">Password is required</span>
+        <span *ngIf="loginForm.controls.password?.errors?.minlength">Password must be 6 characters</span>
+            </div>
+    <p class="fs-6">Don't have an account? <span routerLink="/signup" class="Signup text-decoration-underline">Signup</span></p>
+<button class="btn btn-primary mt-2 d-flex justify-content-center align-content-center" [disabled]="loginForm.invalid">Login</button>
+</form>
+</div>

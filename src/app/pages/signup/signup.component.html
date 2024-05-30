@@ -1,0 +1,36 @@
+<div class="container fs-5 shadow-lg rounded-5">
+    <h2>SignUp User</h2>
+    <form class="form-group d-flex flex-column pb-4 text-dark" [formGroup]="SignupForm" (submit)="onSubmit()">
+        <label for="userName">User Name:</label>
+        <input type="text" name="userName" id="userName" class="form-control" formControlName="userName">
+        <div *ngIf="SignupForm.controls.userName?.invalid && (SignupForm.controls.userName?.touched || SignupForm.controls.userName?.dirty)" class="text-danger">
+<span *ngIf="SignupForm.controls.userName?.errors?.required">UserName is required</span>
+<span *ngIf="SignupForm.controls.userName?.errors?.minlength">UserName must be a 6 characters</span>
+        </div>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" class="form-control" formControlName="email">
+        <div *ngIf="SignupForm.controls.email?.invalid && (SignupForm.controls.email?.touched || SignupForm.controls.email?.dirty)" class="text-danger">
+            <span *ngIf="SignupForm.controls.email?.errors?.required">Email is required</span>
+            <span *ngIf="SignupForm.controls.email?.errors?.email">Invalid email format</span>
+                </div>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" class="form-control" formControlName="password">
+        <div *ngIf="SignupForm.controls.password?.invalid && (SignupForm.controls.password?.touched || SignupForm.controls.password?.dirty)" class="text-danger">
+            <span *ngIf="SignupForm.controls.password?.errors?.required">Password is required</span>
+            <span *ngIf="SignupForm.controls.password?.errors?.minlength">Password must be 6 characters</span>
+                </div>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" name="confirmPassword" id="confirmPassword" class="form-control" formControlName="confirmPassword">
+        <div *ngIf="SignupForm.controls.confirmPassword.invalid && (SignupForm.controls.confirmPassword.touched || SignupForm.controls.confirmPassword.dirty)" class="text-danger">
+            <span *ngIf="SignupForm.controls.confirmPassword.errors?.required">confirmPassword is required</span>
+            <span *ngIf="SignupForm.controls.confirmPassword.errors?.minlength">confirmPassword must be 6 characters</span>
+                </div>
+        <label for="mobile">Mobile:</label>
+        <input type="text" name="mobile" id="mobile" class="form-control" formControlName="mobile">
+        <div *ngIf="SignupForm.controls.mobile.invalid && (SignupForm.controls.mobile.touched || SignupForm.controls.mobile.dirty)" class="text-danger">
+            <span *ngIf="SignupForm.controls.mobile.errors?.required">Mobile number is required</span>
+                </div>
+                <p>Already have an account? <span routerLink="/login" class="login text-decoration-underline">Login</span></p>
+        <button class="btn btn-primary mt-3" [disabled]="SignupForm.invalid">SignUp</button>
+    </form>
+</div>

@@ -1,0 +1,14 @@
+a{
+    text-decoration: none;
+    color: aquamarine;
+}
+a:hover{
+    color: azure;
+}
+.btn{
+    background-color:aquamarine;
+    color: black;
+}
+.btn:hover{
+    background-color: azure;
+}

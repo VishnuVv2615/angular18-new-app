@@ -84,9 +84,13 @@
               "src/assets"
             ],
             "styles": [
+              "new-app/angular-new-app/node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "new-app/angular-new-app/node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "new-app/angular-new-app/node_modules/jquery/dist/jquery.min.js"
+            ]
           }
         }
       }
