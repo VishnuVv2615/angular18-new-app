@@ -1,1 +1,16 @@
-<p>home works!</p>
+<div class="home d-flex justify-content-center align-content-center p-5">
+   <table class="table-bordered border-dark table-responsive">
+    <thead class="">
+        <th>Id</th>
+        <th>Title</th>
+        <th>Body</th>
+    </thead>
+    <tbody class="justify-content-center">
+        <tr *ngFor="let product of data">
+<td>{{product.id}}</td>
+<td>{{product.title}}</td>
+<td>{{product.body}}</td>
+        </tr>
+    </tbody>
+   </table>
+</div>

@@ -1,0 +1,35 @@
+.movies{
+    padding: 10px;
+}
+.product {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  
+  .card-img-top {
+    width: 200px;
+    object-fit: contain;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+  }
+  
+  .btn-primary {
+    width: 100%;
+  }
+  
+  /* Optional: Add hover effect */
+  .product:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
